@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    <link rel="stylesheet" href="styles/bootstrap-material-design.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/ListPage.css">
+    <title>Transaction</title>
+</head>
+
+<body style="background-color: white;">
+    <nav class="navbar navbar-dark fixed-top">
+
+        <button class="btn bmd-btn-icon dropdown-toggle mx-1" onclick="javascript:window.history.back(-1);" id="back"
+            type="button">
+            <span class="material-icons">
+                keyboard_backspace
+            </span>
+        </button>
+
+
+        <a class="navbar-brand" href="#" style="position: absolute; left: 13%;">Transaction</a>
+        <button id = "submitTransactionInfo" class="btn bmd-btn-icon dropdown-toggle" type="button">
+            <i class="material-icons">check</i>
+        </button>
+
+
+
+    </nav>
+
+    <div id="sellTransactionPage" class="container page-container text-center col-lg-9 col-xl-7">
+
+        <div id="itemDetail" class="justify-content-center" style="height: 100px;">
+
+            <div id="transactionContainer" class="text-center">
+                <div class = "post px-0 my-4">
+                    <img style = "border-radius: 2em;" class="img-fluid" src=""alt="">
+                    <div class="text-center h4 col-7" style="padding-right: 10%;">
+                    <div id = "Name" class="itemDetail"></div>
+                    <div id="Price" class="itemDetail"></div>
+                </div>
+            <!-- <div class="h1" style="">&nbsp;&nbsp;&nbsp;Hello Dr. Yoder!</div> -->
+        </div>
+        <div class ="h4 my-4 text-left" id="buyer"></div>
+        <div class ="h4 my-4 text-left" id="buyerEmail"></div>
+        <div class ="h4 my-4 text-left" id="purchaseTime"> </div>
+        
+        <div id="pickupDetail" class = "addressName paymentMethod my-4 mx-0 h4 py-2">
+			
+		</div>
+
+        
+
+        <div id="addressDetail" class = "addressName paymentMethod my-4 mx-0 shipping">
+			<div class="aContainer h4">
+			</div>
+		</div>
+        <label class = "shipping">Tracking Number: </label>
+        <input type="text" name="" id="trackingNum" class = "shipping" placeholder="Please Type in the Traking Number"/>
+        <label class = "shipping">Shipping Method:</label>
+        <input type="text" name="" id="shipMethod" class = "shipping" placeholder="Please Type in the Shipping Method"/>
+
+        <br>
+        <br>
+    </div>
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/popper.js"></script>
+    <script src="scripts/bootstrap-material-design.js"></script>
+    <script>
+        $("body").bootstrapMaterialDesign();
+    </script>
+    <!-- <script src="/__/firebase/7.18.0/firebase-app.js"></script>
+    <script src="/__/firebase/7.18.0/firebase-analytics.js"></script>
+    <script src="/__/firebase/7.18.0/firebase-auth.js"></script>
+    <script src="/__/firebase/7.18.0/firebase-firestore.js"></script>
+    <script src="/__/firebase/init.js"></script> -->
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

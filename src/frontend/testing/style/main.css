@@ -1,0 +1,29 @@
+body {
+    background: #800000;
+  }
+  .button-group, .container {
+    text-align: center;
+    padding: 2vw;
+  }
+  #displayEntries {
+    margin: 0 15vw;
+    text-align: left;
+  }
+  button {
+    font-size: 1.5em;
+    padding: 10px 20px;
+    margin: 10px;
+  }
+  #counterText {
+    color: white;
+    font: 3em Consolas, Arial, sans-serif;
+    text-align: center;
+  }
+  label {
+    font: 3em Consolas, Arial, sans-serif;
+    color: white;
+  }
+  input {
+    font-size: 2em;
+  }
+  

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+  <link rel="stylesheet" href="styles/bootstrap-material-design.min.css">
+  <link rel="stylesheet" href="styles/myPostPage.css">
+  <title>My Post Page</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-dark fixed-top">
+
+    <button class="btn bmd-btn-icon dropdown-toggle mx-1" onclick="javascript:window.history.back(-1);" id = "back" type="button">
+      <span class="material-icons">
+        keyboard_backspace
+      </span>
+    </button>
+      
+
+    <a class="navbar-brand" href="#" style="position: absolute; left: 13%;">My Post Page</a>
+    <button class="btn bmd-btn-icon dropdown-toggle mx-1" id = "setting" type="button">
+      <i class="material-icons">settings</i>
+    </button>
+
+    <button class="btn bmd-btn-icon dropdown-toggle" id = "account" type="button">
+      <i class="material-icons">account_circle</i>
+    </button>
+  </nav>
+
+
+  <div id="myPostPage" class="container page-container text-center">
+
+ 
+    <div id="myPostContainer">
+      <div id="Container"></div>
+       
+    </div>
+
+
+  </div>
+
+
+  
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/popper.js"></script>
+  <script src="scripts/bootstrap-material-design.js"></script>
+  <script>$("body").bootstrapMaterialDesign();</script>
+  
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>

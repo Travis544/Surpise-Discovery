@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    <link rel="stylesheet" href="styles/bootstrap-material-design.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>Account Page</title>
+</head>
+
+<body style="background-color: white;">
+    <nav class="navbar navbar-dark fixed-top">
+
+        <button class="btn bmd-btn-icon dropdown-toggle mx-1" onclick="javascript:window.history.back(-1);" id="back"
+            type="button">
+            <span class="material-icons">
+                keyboard_backspace
+            </span>
+        </button>
+
+
+        <a class="navbar-brand" href="#" style="position: absolute; left: 13%;">&nbsp;Account</a>
+        <!-- <button class="btn bmd-btn-icon dropdown-toggle mx-1" id="setting" type="button">
+            <i class="material-icons">settings</i>
+        </button> -->
+
+        <button id = "submitInfoChange" class="btn bmd-btn-icon dropdown-toggle" type="button">
+            <i class="material-icons">check</i>
+        </button>
+
+    </nav>
+
+    <div id="accountPage" class="container page-container text-center">
+        <div id="infoContainer" class="justify-content-center" style="height: 100px;">
+
+            <div id="accountPhoto" class="text-center">
+                <img class="userImage round_icon" src="/loading.jpg" alt="">
+            </div>
+            <!-- <div class="h1" style="">&nbsp;&nbsp;&nbsp;Hello Dr. Yoder!</div> -->
+        </div>
+
+        <div id="inputContainer" class="">
+
+            <div class="my-3 py-3 justify-content-start">
+                Name:
+                <input id="nameInput" type="text" name="search" placeholder=" Name">
+            </div>
+
+            <div class="my-3 py-3 justify-content-start">
+                Email:
+                <input id="emailInput" type="text" name="search" placeholder=" Email">
+            </div>
+
+            <div class="my-3 py-3 justify-content-start">
+                PhotoUrl: Must be a square photo
+                <input id="urlInput" type="text" name="search" placeholder="Your Photo URL">
+            </div>
+
+            <div class="my-3 py-3 justify-content-start">
+                Date Of Birth
+                <input id="DOBInput" type="date" name="search" placeholder="Your Date of Birth">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/popper.js"></script>
+    <script src="scripts/bootstrap-material-design.js"></script>
+    <script>
+        $("body").bootstrapMaterialDesign();
+    </script>
+  
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

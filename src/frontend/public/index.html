@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+  <link rel="stylesheet" href="styles/bootstrap-material-design.min.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <title>Second Hand</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-dark fixed-top">
+    <a class="navbar-brand" href="#">Second Hand</a>
+  
+      <input type="file" id="dataImport" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"  />  
+    <button class="btn bmd-btn-icon dropdown-toggle" id = "account" type="button">
+      <i class="material-icons">account_circle</i>
+      <!-- <img class = "" src="Dr.Yoder.jpg" alt=""> -->
+      </div>
+    </button>
+  </nav>
+
+
+  <div id="mainPage" class="container page-container text-center">
+
+    <form id="labnol" action="ListPage.html">
+      <div class="speech">
+        <input type="text" name="" id="searchBox" placeholder="Search by Name. Click Left to Change."/>
+        <img src="https://www.mobius.md/wp-content/uploads/2019/03/microphone-2104091_1280-copy-1024x607.png" id="dictation" onclick="rhit.startDictation()" >
+        <select class="custom-select mr-sm-2" id="searchSelect">
+          <option selected value="Search by Name">Search by Name</option>
+          <option value="Search by User ID">Search by User ID</option>
+          <option value="Search by Owner Name">Search by Owner Name</option>
+          <option value="Search by Category">Search by Category</option>
+        </select>
+        
+      </div>
+    </form>
+    
+    <div class="pin"  id="7FjmtcF1qX4xRMWD2um3">
+      <img class="img-fluid"
+      src="https://www.livesmallbemore.blog/wp-content/uploads/2017/06/second-hand-2353682_1920-800x500.png"
+      alt="Batering Image">
+    </div>
+  </div>
+
+
+  <div class="wrapper">
+    <div class="dimmer text-center">
+      <span class="exit">Recording...</span>
+    </div>
+    <div class="content">
+    </div>
+  </div>
+
+
+
+  <div class="py-0 text-center" id="buttomContainer">
+    
+    <div id = "buttom" class="row my-2 mx-auto py-2 " >
+      <div id = "discovery" class="col text-center">
+        
+        <button  id = "discoveryButton" class="btn bmd-btn-icon dropdown-toggle mx-1" type="button">
+          <span id = "discoveryIcon" class="material-icons" style="font-size:xx-large">
+            lens
+          </span>
+        </button>
+        <div style="font-size:80%">Discovery</div>
+      </div>
+      
+      <div id = "category" class="col text-center">
+        
+        <button  class="btn bmd-btn-icon dropdown-toggle mx-1" type="button">
+          <span id = "categoryIcon" class="material-icons" style="font-size:xx-large">
+            lens
+          </span>
+        </button>
+        <div style="font-size:80%">Category</div>
+      </div>
+      
+      <div id = "myList" class="col text-center">
+        
+        <button id = "myListButton" class="btn bmd-btn-icon dropdown-toggle mx-1" type="button" >
+          <span id = "myListIcon" class="material-icons" style="font-size:xx-large">
+            lens
+          </span>
+        </button>
+        <div style="font-size:80%">MyList</div>
+      </div>
+
+     
+
+    </div>
+
+  </div>
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/popper.js"></script>
+  <script src="scripts/bootstrap-material-design.js"></script>
+  <script>$("body").bootstrapMaterialDesign();</script>
+  <!-- <script src="/__/firebase/7.18.0/firebase-app.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-analytics.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-auth.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-firestore.js"></script>
+  <script src="/__/firebase/init.js"></script> -->
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+  <link rel="stylesheet" href="styles/bootstrap-material-design.min.css">
+  <link rel="stylesheet" href="styles/ListPage.css">
+  <title>My Payment Method</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-dark fixed-top">
+
+    <button class="btn bmd-btn-icon dropdown-toggle mx-1" onclick="javascript:window.history.back(-1);" id = "back" type="button">
+      <span class="material-icons">
+        keyboard_backspace
+      </span>
+    </button>
+      
+
+    <a id="AddressTitle" class="navbar-brand" href="#" style="position: absolute; left: 13%;">My Address</a>
+   
+    
+  </nav>
+
+
+  <div id="addressPage" class="container page-container text-center">
+
+ 
+    <div id="addressContainer">
+        
+    </div>
+    
+    
+    <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModal" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Address</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <form id="addModalForm" action="javascript:0">
+          <div class="modal-body" id="addModalBody">
+
+        
+            <div class="form-group">
+              <label for="streetInput" class="">Street</label>
+              <input class="form-control" id="streetInput" required>
+            </div>
+            <div class="form-group">
+              <label for="cityInput" class="">City</label>
+              <input type="text" class="form-control"  id="cityInput" required>
+            </div>
+            <div class="form-group">
+              <label for="streetInput " class="">Zip</label>
+              <input  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+              type = "number"
+              maxlength = "5" required class="form-control" id="zipInput">
+            </div>
+            <div class="form-group">
+              <label for="stateInput" class="">State</label>
+              <input type="text" class="form-control" id="stateInput">
+            </div>
+            <div class="form-group">
+              <label for="campusMailBoxInput" class="">Campus mailbox</label>
+              <input type="number" required  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+              type = "number"
+              maxlength = "4" class="form-control" id="campusMailBoxInput">
+            </div>
+       
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary" id="addAddress" >Add address</button>
+            </div>
+          </form>
+          </div>
+        
+        </div>
+      </div>
+  
+
+
+    <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="updateModal" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">New Address</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="modal-body" id="updateModalBody">
+
+            <form id="updateModalForm">
+            <div class="form-group">
+              <label for="streetInput" class="">New Street</label>
+              <input class="form-control" id="streetUInput" required>
+            </div>
+
+            <div class="form-group">
+              <label for="cityInput" class="">New City</label>
+              <input type="text" class="form-control" id="cityUInput"  required>
+            </div>
+
+            <div class="form-group">
+              <label for="streetInput " class="">New Zip</label>
+              <input  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+              type = "number"
+              maxlength = "5" class="form-control" id="zipUInput"  required>
+            </div>
+
+            <div class="form-group">
+              <label for="stateInput" class="">New State</label>
+              <input type="text" class="form-control" id="stateUInput"  required>
+            </div>
+            <div class="form-group">
+              <label for="campusMailBoxInput" class="">New Campus mailbox</label>
+              <input type="number"  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+              type = "number"
+              maxlength = "4" class="form-control" id="campusMailBoxUInput"  required>
+            </div>
+          </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary" id="updateAddress" data-dismiss="modal">Update Address</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="addressLabel">Address</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+  
+            <div class="modal-body" id="deleteModalBody">
+              <p>Are you sure you want to delete this address?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+              <button type="submit" class="btn btn-primary" id="deleteAddress" data-dismiss="modal">Yes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      
+    
+    </div>
+
+
+    
+
+
+    <button id ="fab" type = "button" class="btn bmd-btn-fab" data-toggle="modal" data-target="#addModal"> 
+      <i class = "material-icons">add</i>
+    </button>
+  </div>
+
+
+  
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/popper.js"></script>
+  <script src="scripts/bootstrap-material-design.js"></script>
+  <script>$("body").bootstrapMaterialDesign();</script>
+  
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+  <link rel="stylesheet" href="styles/bootstrap-material-design.min.css">
+  <link rel="stylesheet" href="styles/ListPage.css">
+  <title>Add Item</title>
+</head>
+
+<body onload = "load()">
+  <nav class="navbar navbar-dark fixed-top">
+
+    <button class="btn bmd-btn-icon dropdown-toggle mx-1" onclick="javascript:window.history.back(-1);" id = "back" type="button">
+      <span class="material-icons">
+        keyboard_backspace
+      </span>
+    </button>
+      
+
+    <a class="navbar-brand" href="#" style="position: absolute; left: 13%;">Add Item</a>
+
+    <button class="btn bmd-btn-icon dropdown-toggle" id = "account" type="button">
+      <i class="material-icons">account_circle</i>
+    </button>
+  </nav>
+
+
+  <div id ="addItem" class = "information" >
+    <div class="form-group">
+      <label for="input-item">Item Name</label>
+      <input type="text" class="form-control" id="inputItem" >
+    </div>
+    <div class="form-group">
+      <label for="input-imageUrl">imageUrl</label>
+      <input type="text" class="form-control" id="inputImageUrl" >
+    </div>
+    <div class="form-group">
+      <label for="input-cat">Item Type</label><br>
+      <input type="text" class="form-control" id="inputCat" >
+    </div>
+    <div class="form-group">
+      <label for="input-des">Description</label>
+      <input type="text" class="form-control" id="inputDes" >
+    </div>
+    <div class="form-group">
+      <label for="input-des">Keyword</label>
+      <input type="text" class="form-control" id="inputKeyword" >
+    </div>
+    <div class="form-group">
+      <label for="input-des">Price</label>
+      <input type="number" class="form-control" id="inputPrice" >
+    </div>
+    
+    <span class="bmd-help">Where did you find this image?</span>
+  </div>
+
+  <button id= "submitButton" type="button" class = "btn" >Submit</button>
+
+  
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/popper.js"></script>
+  <script src="scripts/bootstrap-material-design.js"></script>
+  <script>$("body").bootstrapMaterialDesign();</script>
+  <!-- <script src="/__/firebase/7.18.0/firebase-app.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-analytics.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-auth.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-firestore.js"></script>
+  <script src="/__/firebase/init.js"></script> -->
+  <script src="scripts/main.js"></script>
+  <script>
+    function load(){
+        if(window.performance.navigation.type == 2){
+            window.location.reload();
+        }
+    }
+</script>
+</body>
+
+</html>

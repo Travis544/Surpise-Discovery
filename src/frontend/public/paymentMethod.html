@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+  <link rel="stylesheet" href="styles/bootstrap-material-design.min.css">
+  <link rel="stylesheet" href="styles/ListPage.css">
+  <title>My Payment Method</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-dark fixed-top">
+
+    <button class="btn bmd-btn-icon dropdown-toggle mx-1" onclick="javascript:window.history.back(-1);" id = "back" type="button">
+      <span class="material-icons">
+        keyboard_backspace
+      </span>
+    </button>
+      
+
+    <a class="navbar-brand" href="#" style="position: absolute; left: 13%;">My Payment methods</a>
+   
+    
+  </nav>
+
+
+  <div id="paymentMethodPage" class="container page-container text-center">
+
+ 
+    <div id="paymentMethodContainer">
+   
+        
+    </div>
+
+    <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="updateModal" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Update payment</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="modal-body" id="updateModalBody">
+            <form id="updateModalForm" action="javascript:0">
+            <select class="form-control" id="otherPaymentTypeSelection">
+              <option value="Venmo">Venmo</option>
+              <option value="Google Pay">Google Pay</option>
+              <option value="Paypal">Paypal</option>
+              <option value="Cash">Cash</option>
+            
+            </select>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary" id="updatePayment" >Update Payment</button>
+          </div>
+        </form>
+        
+        </div>
+      </div>
+    </div>
+    
+
+
+    <!-- <div class="modal fade " id="updateCardModal" tabindex="-1" role="dialog" aria-labelledby="updateCardModal" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Update Card</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <input type="number" class="form-control " id="inputCardNum" placeholder="New Card Number" maxlength="19">
+            <input class="form-control" id="inputBank" placeholder="New Bank">
+            <input type="date" class="form-control" id="inputDate" placeholder="New Date">
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="updateCardButton" data-dismiss="modal">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModal" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Are you sure you want to delete this payment method
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+            <button type="button" class="btn btn-primary" id="deleteMethodButton" data-dismiss="modal">Yes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModal" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"> payment</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="modal-body" id="addModalBody">
+            <form id="addModalForm" action="javascript:0">
+            <select class="form-control" id="addOtherPaymentTypeSelection">
+              <option value="Venmo">Venmo</option>
+              <option value="Google Pay">Google Pay</option>
+              <option value="Paypal">Paypal</option>
+              <option value="Cash">Cash</option>
+          
+            </select>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary "  id="paymentMethodToggle" data-card="0">Toggle</button>
+            <button type="submit" class="btn btn-primary" id="addPayment" >Add Payment</button>
+          </div>
+        </form>
+        
+        </div>
+      </div>
+    </div>
+
+   
+    <!-- <div class="modal fade" id="addCardModal" tabindex="-1" role="dialog" aria-labelledby="addCardModal" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+            <input type="number" class="form-control " id="inputCardNum" placeholder="Card Number" maxlength="19">
+            <input class="form-control" id="inputBank" placeholder="Bank">
+            <input type="date" class="form-control" id="inputDate" placeholder="Expiration Date">
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary paymentMethodToggle  data-card="1">Toggle</button>
+            <button type="button" class="btn btn-primary" id="addPayment" data-dismiss="modal">Add Payment</button>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+
+
+
+    <button id ="fab" type = "button" class="btn bmd-btn-fab" data-toggle="modal" data-target="#addModal"> 
+      <i class = "material-icons">add</i>
+    </button>
+  </div>
+
+
+  
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/popper.js"></script>
+  <script src="scripts/bootstrap-material-design.js"></script>
+  <script>$("body").bootstrapMaterialDesign();</script>
+  
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>

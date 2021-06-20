@@ -1,0 +1,207 @@
+body {
+    background: white;
+    font-family: cursive;
+}
+
+.navbar {
+    background-color: #349daf;
+    color: white;
+}
+
+.page-container {
+    margin-top: 75px;
+}
+
+#setting{
+    position: absolute;
+    right: 70px;
+    size: 200%;
+    text-align: center;
+
+}
+
+.post, .myOrderCard{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(236, 236, 236);
+    border-radius: 2em;
+    width: 100%;
+}
+
+#fab{
+    position: fixed;
+    /* the different of absolute is using fixed can fix the button so it 
+    will not move when you scroll down */
+    right: 30px;
+    bottom: 25px;
+    background: #349daf;
+    color: white;
+    z-index: 999;
+}
+
+
+#purchaseContainer img, #transactionContainer img{
+    width: 40%;
+    border-radius: 2em;
+}
+
+.information{
+    margin: 80px;
+ }
+ 
+ #submitButton{
+    display: block;
+    margin: 60px auto;
+    color: white;
+    background: #349daf;
+    font-size: 1.1em;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+
+.paymentText{
+    text-align: center;
+}
+
+.paymentButton{
+    background-color:#800000;
+    color: white;
+    margin:20px;
+}
+
+.paymentMethod{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: ; */
+    align-items: center;
+    background-color: rgb(236, 236, 236);
+    border-radius: 2em;
+    margin:20px;
+}
+
+
+.paymentButtonContainer{
+    display: flex;
+    flex-direction: row;
+   
+}
+
+.orderPost{
+
+}
+
+
+.myOrderCard{
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    align-items:start;
+}
+
+.orderDetails{
+    display: flex;
+    flex-direction: column;
+    flex-basis:70%;
+    margin-left:50px;
+    margin-right:50px;
+
+}
+
+@media (min-width: 0px) { 
+
+    #Container{
+        column-count: 1;
+        column-gap: 5px;
+    }
+}
+
+@media (min-width: 768px) { 
+    #Container{
+        column-count: 1;
+        column-gap: 35px;
+      
+    }
+    #Container img{
+        width: 50%;
+        border-radius: 2em;
+        
+    }
+
+    #setting{
+        position: absolute;
+        right: 85px;    
+    }
+
+ 
+}
+
+@media(max-width:1200px){
+    .myOrderCard{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .orderDetails{
+        margin-top:20px;
+        margin-bottom: 20px;
+    }
+}
+
+
+@media (min-width: 992px) { 
+    #Container{
+        column-count: 2;
+        column-gap: 45px;
+    }
+    .Post{
+        width:15vw;
+    }
+    #Container img{
+        width: 50%;
+        border-radius: 2em;
+        
+    }
+
+}
+
+
+@media (min-width: 1200px) { 
+    #Container {
+        column-count: 2;
+        column-gap: 25px;
+        border-radius: 2em;
+    }
+    .Post{
+        width:25vw;
+    }
+           
+    #Container img{
+        width: 55%;
+        border-radius: 2em;
+    }
+    #setting{
+        position: absolute;
+        right: 120px;    
+    }
+ }
+
+ #account img{
+    width: 100%;
+ }
+
+ .selectButton{
+    display: none;
+ }
+
+ #purchaseContainer #addressDetail, #purchaseContainer{
+     display: none;
+ }
+ 
+#sellTransactionPage{
+    display: none;
+}
+

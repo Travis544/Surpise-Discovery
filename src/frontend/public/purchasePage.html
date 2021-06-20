@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    <link rel="stylesheet" href="styles/bootstrap-material-design.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/ListPage.css">
+    <title>Purchase</title>
+</head>
+
+<body style="background-color: white;">
+    <nav class="navbar navbar-dark fixed-top">
+
+        <button class="btn bmd-btn-icon dropdown-toggle mx-1" onclick="javascript:window.history.back(-1);" id="back"
+            type="button">
+            <span class="material-icons">
+                keyboard_backspace
+            </span>
+        </button>
+
+
+        <a class="navbar-brand" href="#" style="position: absolute; left: 13%;">Purchase</a>
+        <button id = "submitPurchase" class="btn bmd-btn-icon dropdown-toggle" type="button">
+            <i class="material-icons">check</i>
+        </button>
+
+
+
+    </nav>
+
+    <div id="purchasePage" class="container page-container text-center">
+
+        <div id="itemDetail" class="justify-content-center" style="height: 100px;">
+
+            <div id="purchaseContainer" class="text-center">
+                <div class = "post px-0 my-4">
+                    <img style = "border-radius: 2em;" class="img-fluid" src="https://www.autocar.co.uk/sites/autocar.co.uk/files/styles/gallery_slide/public/1-mercedes-amg-c-63-s-coupe-2019-rt-hero-front.jpg?itok=ojNozBQO"alt="">
+                    <div class="text-center h4 col-7" style="padding-right: 10%;">
+                    <div id = "Name" class="itemDetail">Item: Name</div>
+                    <div id="Price" class="itemDetail">Price: 100</div>
+                </div>
+            <!-- <div class="h1" style="">&nbsp;&nbsp;&nbsp;Hello Dr. Yoder!</div> -->
+        </div>
+
+        <form>  
+            <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                  In Person
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                  Shipping
+                </label>
+              </div>
+          </form>
+        
+        <input type="text" name="" id="location" placeholder="Please Type in the pick up location"/>
+        
+        <div id="addressBody">
+            <button id = "addressButton" class="btn btn-outline-primary purchaseButton"><i class="material-icons">home</i>&nbsp;&nbsp;address</button>
+        </div>
+
+        <div id="addressDetail" class = "addressName paymentMethod">
+			<div class="aContainer">
+				
+			</div>
+		</div>
+
+        <div id="paymentBody">
+            <button id = "paymentButton" class="btn btn-outline-primary purchaseButton"><i class="material-icons">payment</i>&nbsp;&nbsp;payment</button>
+        </div>
+
+        <div id="paymentDetail" class = "addressName paymentMethod">
+			<div class="aContainer">
+				
+			</div>
+		</div>
+
+    </div>
+
+
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/popper.js"></script>
+    <script src="scripts/bootstrap-material-design.js"></script>
+    <script>
+        $("body").bootstrapMaterialDesign();
+    </script>
+    <!-- <script src="/__/firebase/7.18.0/firebase-app.js"></script>
+    <script src="/__/firebase/7.18.0/firebase-analytics.js"></script>
+    <script src="/__/firebase/7.18.0/firebase-auth.js"></script>
+    <script src="/__/firebase/7.18.0/firebase-firestore.js"></script>
+    <script src="/__/firebase/init.js"></script> -->
+    <script src="scripts/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+body {
+    background: white;
+    font-family: cursive;
+}
+
+.navbar {
+    background-color: #349daf;
+    color: white;
+}
+
+.page-container {
+    margin-top: 75px;
+}
+
+#setting{
+    position: absolute;
+    right: 70px;
+    size: 200%;
+    text-align: center;
+
+}
+
+#account img{
+   width: 100%;
+}
+
+.myPost{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+#myPostContainer img{
+    height: 190px;
+    width: 140px;
+}
+
+@media (min-width: 0px) { 
+
+}
+
+@media (min-width: 768px) { 
+
+
+
+    #setting{
+        position: absolute;
+        right: 85px;    
+    }
+
+ 
+}
+
+
+@media (min-width: 992px) { 
+
+
+    #setting{
+        position: absolute;
+        right: 100px;    
+    }
+}
+
+
+@media (min-width: 1200px) { 
+
+
+    #setting{
+        position: absolute;
+        right: 120px;    
+    }
+
+ 
+ }

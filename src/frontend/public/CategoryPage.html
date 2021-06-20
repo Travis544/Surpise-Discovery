@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+  <link rel="stylesheet" href="styles/bootstrap-material-design.min.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <title>Bartering</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-dark fixed-top">
+    <a class="navbar-brand" href="#s">Category</a>
+    <!-- <button class="btn bmd-btn-icon dropdown-toggle mx-1" id = "setting" type="button">
+      <i class="material-icons">settings</i>s
+    </button> -->
+
+    <button class="btn bmd-btn-icon dropdown-toggle" id = "account" type="button">
+      <i class="material-icons">account_circle</i>
+    </button>
+  </nav>
+
+
+  <div id="categoryPage" class="container page-container text-center">
+    <Button id="Food" class="container page-container text-center">
+       Food
+    </Button>
+    <Button id="Book" class="container page-container text-center">
+        Book
+     </Button>
+     <Button id="Clothes" class="container page-container text-center">
+        Clothes
+     </Button>
+     <Button id="Electronic" class="container page-container text-center">
+        Electronic Devices
+     </Button>
+     <Button id="Shoes" class="container page-container text-center">
+        Shoes
+     </Button>
+  </div>
+
+
+  <div class="py-0 text-center" id="buttomContainer">
+    
+    <div id = "buttom" class="row my-2 mx-auto py-2 " >
+      <div id = "discovery" class="col text-center">
+        
+        <button  id = "discoveryButton" class="btn bmd-btn-icon dropdown-toggle mx-1" type="button">
+          <span id = "discoveryIcon" class="material-icons" style="font-size:xx-large">
+            lens
+          </span>
+        </button>
+        <div style="font-size:80%">Discovery</div>
+      </div>
+      
+      <div id = "category" class="col text-center">
+        
+        <button  class="btn bmd-btn-icon dropdown-toggle mx-1" type="button">
+          <span id = "categoryIcon" class="material-icons" style="font-size:xx-large">
+            lens
+          </span>
+        </button>
+        <div style="font-size:80%">Category</div>
+      </div>
+      
+      <div id = "myList" class="col text-center">
+        
+        <button id = "myListButton" class="btn bmd-btn-icon dropdown-toggle mx-1" type="button" >
+          <span id = "myListIcon" class="material-icons" style="font-size:xx-large">
+            lens
+          </span>
+        </button>
+        <div style="font-size:80%">MyList</div>
+      </div>
+    </div>
+
+  </div>
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/popper.js"></script>
+  <script src="scripts/bootstrap-material-design.js"></script>
+  <script>$("body").bootstrapMaterialDesign();</script>
+  <!-- <script src="/__/firebase/7.18.0/firebase-app.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-analytics.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-auth.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-firestore.js"></script>
+  <script src="/__/firebase/init.js"></script> -->
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>

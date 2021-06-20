@@ -1,0 +1,81 @@
+body {
+    background: white;
+    font-family: cursive;
+}
+
+.navbar {
+    background-color: #349daf;
+    color: white;
+}
+
+.page-container {
+    margin-top: 75px;
+}
+
+#edit{
+    position: absolute;
+    right: 70px;
+    size: 200%;
+    text-align: center;
+
+}
+
+#account img{
+    width: 100%;
+ }
+
+
+.information{
+    font-size: 80%;
+}
+
+
+@media (min-width: 0px) { 
+
+}
+
+@media (min-width: 768px) { 
+
+
+
+    #setting{
+        position: absolute;
+        right: 85px;    
+    }
+
+ 
+}
+
+
+@media (min-width: 992px) { 
+
+
+    #setting{
+        position: absolute;
+        right: 100px;    
+    }
+}
+
+
+@media (min-width: 1200px) { 
+
+
+    #setting{
+        position: absolute;
+        right: 120px;    
+    }
+
+ 
+ }
+
+ #edit{
+     display: flex;
+ }
+
+ #myImg{
+    height:40vh;
+}
+
+#edit{
+    display:none;
+}

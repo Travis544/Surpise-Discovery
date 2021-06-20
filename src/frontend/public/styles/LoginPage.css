@@ -1,0 +1,167 @@
+body {
+    background: rgb(228, 228, 230);
+}
+
+.navbar {
+    background-color: #349daf;
+    color: white;
+}
+
+.page-container {
+    margin-top: 75px;
+}
+
+
+
+#setting{
+    position: absolute;
+    right: 70px;
+    size: 200%;
+    text-align: center;
+
+}
+
+#discovery{
+    color: #FF5722;
+    
+}
+
+#login{
+    background: #349daf;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12), 0px 8px 8px rgba(0, 0, 0, 0.24);
+    color: white;
+    border-radius: 5em;
+    width: 80%;
+    height: 50px;
+  
+}
+
+#forgetPassword{
+    font-family: open sans,Arial,Helvetica,sans-serif;
+}
+
+
+#logText{
+    font-style: normal;
+    color: rgb(55, 89, 102);
+    margin: 10px;
+}
+
+.form_input {
+    width: 80%;
+    padding: 14px;
+    border-radius: 7px;
+    background-color: #fff;
+    border: solid 1px rgba(0,0,0,.12);
+    font-size: 15px;
+    line-height: 1.8;
+    font-family: open sans,Arial,Helvetica,sans-serif;
+}
+
+
+#container{
+    margin-top:200px;
+}
+
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 80%;
+    text-align: center;
+    text-decoration: none;
+    margin:  20px;
+    border-radius: 5em;
+  }
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-google {
+    background: white;
+    color:orange;
+  }
+.button{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+
+
+.loginAndRegister{
+    margin: 60px auto;
+    color: white;
+    background: #800000;
+    font-size: 1.1em;
+    padding: 10px 30px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+a{
+    color:white;
+}
+
+a:hover{
+    color:white;
+}
+
+#buttonContainer{
+    display: flex;
+    flex-direction: row;
+}
+@media (min-width: 0px) { 
+    #buttomContainer{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media (min-width: 768px) { 
+    #login{  
+        width: 70%;
+    }
+    .form_input {
+        width: 70%;
+    }
+    .fa {
+        width:70%;
+    }
+}
+
+
+@media (min-width: 992px) { 
+    #login{  
+        width: 62%;
+    }
+    .form_input {
+        width: 62%;
+       
+    }
+    .fa {
+        width: 62%;
+    }
+    
+}
+
+
+@media (min-width: 1200px) { 
+    #login{  
+        width: 55%;
+    }
+    .form_input {
+        width: 55%;  
+    }
+    .fa {
+        width: 55%;  
+    }
+    
+ }
+ 
+ 
